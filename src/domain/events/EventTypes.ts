@@ -7,26 +7,26 @@ export const EVENT_ENROLLMENT_CANCELLED = "EnrollmentCancelled";
 export const EVENT_COURSE_CAPACITY_REACHED = "CourseCapacityReached";
 export const EVENT_COURSE_FULL = "CourseFull";
 
-export interface StudentEnrolledEvent {
+export type StudentEnrolledEvent = {
   enrollmentId: EnrollmentId;
   studentId: StudentId;
   courseCode: CourseCode;
-}
+};
 
-export interface EnrollmentCancelledEvent {
+export type EnrollmentCancelledEvent = {
   enrollmentId: EnrollmentId;
   studentId: StudentId;
   courseCode: CourseCode;
-}
+};
 
-export interface CourseCapacityReachedEvent {
+export type CourseCapacityReachedEvent = {
   courseCode: CourseCode;
   enrolledCount: number;
   capacity: number;
-}
+};
 
-export interface CourseFullEvent {
+export type CourseFullEvent = {
   courseCode: CourseCode;
   enrolledCount: number;
   capacity: number;
-}
+};
